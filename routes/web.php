@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return (new App\Http\Controllers\Users\UserController())->userList();
 });
+
+Route::post('/user', function () {
+    return (new App\Http\Controllers\Users\UserController())->addUser();
+});
